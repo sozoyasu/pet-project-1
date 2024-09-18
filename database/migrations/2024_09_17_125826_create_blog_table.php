@@ -31,7 +31,6 @@ return new class extends Migration
         });
 
         Schema::create('blog_posts_categories', function (Blueprint $table) {
-            $table->id();
             $table->foreignId('post_id')->constrained('blog_posts');
             $table->foreignId('category_id')->constrained('blog_categories');
         });
